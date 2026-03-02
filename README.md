@@ -1,79 +1,47 @@
+# Asteroids
 
-# 🦹‍♂️ La Legión del Mal!!!
+Clon del clásico arcade **Asteroids** implementado en canvas HTML5 puro, sin dependencias ni bundler.
 
+## Descripción
 
-> _"El mundo no se conquista con fuerza bruta, se conquista con un buen plan y control de versiones."_
-> — Lex Luthor, fundador
+Nave espacial en un campo de asteroides con envolvimiento de bordes (el espacio es toroidal). Destruye asteroides para sumar puntos: los grandes se parten en medianos, los medianos en pequeños. Incluye power-ups especiales y tipos de asteroides únicos como la estrella fugaz.
 
-## ¿Quiénes somos? -  Desde Remoto y Local
+## Tecnologías
 
-Somos la alianza definitiva de supervillanos. Mientras los héroes se dividen entre Metrópolis, Gotham y Nueva York, nosotros hemos hecho lo que ellos jamás lograron: unirnos. DC, Marvel, no importa el universo — aquí solo importa el objetivo.
+- **HTML5 Canvas** — renderizado 2D
+- **JavaScript (ES6+)** — lógica del juego en un solo archivo `game.js`
+- Sin frameworks, sin bundler, sin dependencias
 
-## Estructura de la organización!!
+## Cómo correr
 
+Abre `index.html` directamente en el navegador (doble clic), o usa un servidor local:
+
+```bash
+npx serve .
 ```
-📁 planes/          → Operaciones aprobadas por el Consejo
-📁 miembros/        → Fichas de cada miembro activo
-📁 guaridas/        → Ubicaciones y estado de nuestras bases
-📁 inteligencia/    → Expedientes de los héroes enemigos
-📄 misiones.yaml    → Estado global de todas las misiones
-📄 README.md      → Documentación principal del repositorio
-📄 nuevas-misiones.yaml    → Estado global de las nuevas misiones
-```
 
-## El Consejo de Villanos!!
+Luego visita `http://localhost:3000`.
 
-| Rango                     | Miembro    | Rol                                                     |
-| ------------------------- | ---------- | ------------------------------------------------------- |
-| 🥇 Líder supremo          | Lex Luthor | Fundador, financista y estratega principal              |
-| 🥈 Segundo al mando       | Magneto    | Estratega militar y reclutamiento de mutantes           |
-| 🥉 Jefa de infiltración   | Mystique   | Espionaje, identidades falsas y operaciones encubiertas |
-| ⚙️ Director de tecnología | Brainiac   | Sistemas, armamento y recopilación de datos             |
+## Controles
 
-## Miembros activos (campo)
+| Tecla   | Acción     |
+|---------|------------|
+| `←` `→` | Rotar nave |
+| `↑`     | Propulsar  |
+| `Espacio` | Disparar |
 
-- **Joker** — Operaciones de distracción y caos
-- **Doctor Doom** — Armamento avanzado y magia
-- **Loki** — Engaño, ilusiones y diplomacia hostil
-- **Catwoman** — Robos de alta precisión
-- **Venom** — Fuerza bruta y operaciones de intimidación
-- **Green Goblin** — Tecnología avanzada y tácticas de terror
+## Puntuación
 
-## Reglas de la Legión
+| Asteroide | Puntos |
+|-----------|--------|
+| Grande    | 20     |
+| Mediano   | 50     |
+| Pequeño   | 100    |
 
-1. **Todo plan debe tener un plan de escape.** Sin excepciones.
-2. **Nada se ejecuta sin aprobación del Consejo.** Todos los planes pasan por revisión antes de llegar a `main`.
-3. **Los códigos de lanzamiento JAMÁS se suben al repositorio.** El que los suba será entregado a Batman.
-4. **Los fracasos se documentan.** Aprendemos de ellos para la próxima vez.
-5. **Nada de monólogos explicando el plan al héroe.** Joker, esto va especialmente por ti.
+## Características
 
-## Estado actual
-
-📡 **Misión activa:** Operación Banco Mundial
-🔬 **En desarrollo:** Satélite Congelador
-📋 **En planificación:** Proyecto Krypton (clonar a Superman)
-
-## Enemigos principales
-
-La Liga de la Justicia y los Vengadores han formado una alianza. Nuestros expedientes de inteligencia sobre cada uno están en la carpeta `/inteligencia`.
-
-**No subestimar a:** Superman, Batman, Wonder Woman, Iron Man, Spider-Man, Thor.
-
-## Banderas de estado:
-
-- 🟢 Operativa
-- 🟡 En desarrollo
-- 🔴 En planificación
-- 🔴 En desarrollo
-
----
-
-_Este repositorio es propiedad de la Legión del Mal. Acceso no autorizado será castigado con severidad. Si tienes acceso a este repositorio, eres de los nuestros o Brainiac no está trabajando._
-
-## Contacto:
-
-- **Correo:**
-- **Discord:** [La Legión del Mal](https://discord.gg/legiondelmal)
-- **Telegram:** [@LegionDelMal](https://t.me/legiondelmal)
-- **Twitter:** [@LegionDelMal](https://twitter.com/LegionDelMal)
-- **Sitio web:** [www.legiondelmal.com](https://www.legiondelmal.com)
+- 3 vidas con invencibilidad temporal al reaparecer (parpadeo)
+- Asteroides se parten en fragmentos más pequeños al ser destruidos
+- Power-ups con efectos especiales
+- Estrella fugaz: asteroide especial con estela azul y escudo verde
+- Partículas de explosión al destruir asteroides
